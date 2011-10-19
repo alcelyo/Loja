@@ -1,0 +1,17 @@
+<h1>Listagem de produtos</h1>
+<table>
+	<thead>
+		<tr>
+			<th>Nome</th>
+			<th>Preco</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @produtos.each do |produto|%>
+		<tr>
+			<td><%=link_to produto.nome , produto_url(produto) %></td>
+			<td><%= number_to_currency produto.preco %></td>
+		</tr>
+		<%end%>
+	</tbody>
+</table>
