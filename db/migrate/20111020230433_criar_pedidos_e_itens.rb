@@ -5,11 +5,11 @@ class CriarPedidosEItens < ActiveRecord::Migration
       t.timestamps
     end
     create_table :itens do |t|
-      t.integer :pedidos_id, :null => false
-      t.integer :produtos_id, :null => false
+      t.integer :pedido_id, :null => false
+      t.integer :produto_id, :null => false
       t.integer :quantidade, :null => false, :defaut => 1
     end
-    add_index :itens, :pedidos_id
+    add_index :itens, :pedido_id
   end
   
   def down

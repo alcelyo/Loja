@@ -52,6 +52,7 @@ Loja::Application.routes.draw do
 
   root :to => 'produtos#index'
   resources :produtos
+  resources :itens
 
 
 
