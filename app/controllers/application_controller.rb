@@ -9,8 +9,13 @@ class ApplicationController < ActionController::Base
     @pedido_atual ||= if  !session[:pedido_id].blank?
                         Pedido.find(session[:pedido_id])
                       else
-                        Pedido.new( :estado => 'carrinho' )
+                        Pedido.new(:estado => 'carrinho')
                       end
+  end
+
+  def carregar_pagina
+    @page = params[:page] || 1
+    @per_page = params[:per_page] || 2
   end
 
 end
