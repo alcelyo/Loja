@@ -1,0 +1,10 @@
+%h1 Criar/Atualizar Categorias
+
+= admin_form_for( @categoria ) do |f|
+
+  = f.text_field :nome
+  = f.text_area :descricao
+
+  .actions
+    %p= f.submit 'Enviar', :class => 'btn primary'
+

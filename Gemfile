@@ -13,8 +13,18 @@ gem 'less-rails-bootstrap', '1.3.3'
 
 gem 'mysql2'
 
+#ferramenta de busca
+gem 'sunspot_rails'
 
 gem 'will_paginate'
+
+#Ferramenta de teste
+group :test do
+  gem 'rspec-rails'
+end
+
+
+
 
 # Gems used only for assets and not required
 # in production environments by default.
